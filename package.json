@@ -1,0 +1,48 @@
+{
+    "name": "expense-tracker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "author": "Manzi",
+    "license": "ISC",
+    "scripts": {
+        "build": "rimraf dist && babel src --out-dir dist  --copy-files",
+        "start": "node dist/app.js",
+        "dev": "nodemon --exec babel-node src/app.js",
+        "drop_tables": "sequelize db:migrate:undo:all",
+        "create_tables": "sequelize db:migrate && sequelize db:seed:all",
+        "format:check": "prettier --check .",
+        "format:write": "prettier --write .",
+        "lint:check": "eslint .",
+        "lint:fix": "eslint --fix ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/manzif/animal-backend.git"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.18.10",
+        "@babel/core": "^7.18.13",
+        "@babel/node": "^7.18.10",
+        "@babel/plugin-proposal-class-properties": "^7.18.6",
+        "@babel/plugin-proposal-object-rest-spread": "^7.18.9",
+        "@babel/preset-env": "^7.18.10",
+        "bcrypt": "^5.0.1",
+        "dotenv": "^16.0.2",
+        "eslint": "^8.23.0",
+        "eslint-config-prettier": "^8.5.0",
+        "jsonwebtoken": "^8.5.1",
+        "nodemon": "^2.0.19",
+        "pg": "^8.8.0",
+        "pg-hstore": "^2.3.4",
+        "prettier": "^2.7.1",
+        "rimraf": "^3.0.2",
+        "sequelize": "^6.21.4",
+        "sequelize-cli": "^6.4.1"
+    },
+    "dependencies": {
+        "@hapi/joi": "15.0.3",
+        "cors": "^2.8.5",
+        "express": "^4.18.1"
+    }
+}
