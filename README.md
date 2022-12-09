@@ -12,7 +12,7 @@ Requirements:
 Clone repository
 
 ```bash
-git clone https://github.com/manzif/animal-backend.git
+git clone https://github.com/manzif/ubukungu.git
 ```
 
 Install prod dependencies
